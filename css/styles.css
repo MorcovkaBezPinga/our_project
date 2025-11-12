@@ -1,76 +1,168 @@
-.nav-links {
-  list-style: none;
+/* Общие стили */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* Верхняя панель */
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
   display: flex;
-  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Логотип */
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* Навигация */
+.nav-links {
+  display: flex;
+  gap: 36px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: inherit;
-  font-weight: 500;
-  font-family: Arial, Helvetica, sans-serif;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  color: #1b1a1a;
+  color: #222;
+  font-size: 15px;
+  transition: color 0.2s ease;
 }
 
-.logo {
-  text-decoration: none;
-  color: inherit;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
+.nav-links a:hover {
+  color: #555;
 }
 
-.button {
+/* Кнопка */
+.get-template {
   background-color: #000;
   color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px 24px;
   border: none;
-  border-radius: 20px;
+  border-radius: 35px;
+  padding: 15px 25px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
-  width: 155px;
-  height: 46px;
-}
-.button:hover {
-  background: linear-gradient(
-    300deg,
-    #ff0000,
-    #ffa31a,
-    #ff00a6,
-    #ff9900,
-    #00ffe5
-  );
-  background-size: 400% 400%;
-  transform: scale(1.05);
-  animation: gradientMove 8s ease infinite;
-  transition: transform 0.3s ease;
+  transition: background 0.3s ease;
+  margin-left: -375px;
 }
 
-.nav-logo {
+.get-template:hover {
+  /* Градиент */
+  background: linear-gradient(270deg, #ff6b00, #ff00b8, #00bfff);
+  background-size: 600% 600%; /* важная штука для анимации */
+
+  /* Анимация */
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.hero {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: #f2eeea;
+  padding: 4rem 8%;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1 1 450px;
+  max-width: 600px;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hero-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  border-bottom: 1px solid #000;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.hero-link:hover {
+  color: #666;
+  border-color: #666;
+}
+
+.hero-image {
+  flex: 1 1 400px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  justify-content: center;
 }
-.nav-container {
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
 }
-header {
-  position: relative; /* или fixed, если хедер должен быть фиксированным */
-  top: 0; /* двигаем к самому верху */
-  left: 0; /* выравнивание по левому краю */
-  width: 100%; /* чтобы занял всю ширину */
-  /* высота берётся из макета */
+.hero-item {
+  color: #ffffff;
+  width: 1440px;
+  height: 720px;
 }
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: /* высота из макета, например 80px */ ;
-  padding: 0 /* или отступы из макета, например 0 24px */;
+.hero-item-title {
+  color: #000000;
+  width: 134px;
+  height: 38px;
+  margin-left: 336px;
 }
