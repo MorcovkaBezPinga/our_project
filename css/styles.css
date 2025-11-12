@@ -1,4 +1,76 @@
-.logo {
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: color 0.3s ease;
+  text-decoration: none;
   color: #1b1a1a;
-  font-size: 19px;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 155px;
+  height: 46px;
+}
+.button:hover {
+  background: linear-gradient(
+    300deg,
+    #ff0000,
+    #ffa31a,
+    #ff00a6,
+    #ff9900,
+    #00ffe5
+  );
+  background-size: 400% 400%;
+  transform: scale(1.05);
+  animation: gradientMove 8s ease infinite;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.nav-container {
+}
+header {
+  position: relative; /* или fixed, если хедер должен быть фиксированным */
+  top: 0; /* двигаем к самому верху */
+  left: 0; /* выравнивание по левому краю */
+  width: 100%; /* чтобы занял всю ширину */
+  /* высота берётся из макета */
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: /* высота из макета, например 80px */ ;
+  padding: 0 /* или отступы из макета, например 0 24px */;
 }
