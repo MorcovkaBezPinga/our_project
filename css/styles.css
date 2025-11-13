@@ -246,3 +246,17 @@ body {
   width: 285px;
   height: 48px;
 }
+.info {
+}
+.info-item-p {
+  width: 122px;
+  height: 20px;
+  color: #645c55;
+}
+.info-item-h2 {
+  width: 468px;
+  min-height: 42px;
+  color: #1b1a1a;
+  font-family: "Montserrat";
+  font-weight: 300;
+}
